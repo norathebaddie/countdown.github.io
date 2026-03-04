@@ -12,10 +12,11 @@ const date1 = new Date('12/30/2025');
 const date2 = new Date();
 const diffTimeC = Math.abs(date2 - date1);
 const diffDaysC = Math.floor(diffTimeC / (1000 * 60 * 60 * 24));
+const remainingDaysC = 975 - diffDaysC;
 const fractionC = Math.round((diffDaysC / 975) * 10000)/100
 console.log(diffDaysC + " days");
-document.getElementById("daysC").innerHTML = "<p>" + diffDaysC + " days so far </p>"
-console.log( + "% there!");
+document.getElementById("daysC").innerHTML = "<p>" + diffDaysC + " days so far, " + remainingDaysC + " left!</p>"
+console.log(fractionC + "% there!");
 document.getElementById("percentage").innerHTML = "<p>" + fractionC + "% there!</p>"
 </script>
 
