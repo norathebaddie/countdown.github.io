@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
+<style>
+body {
+    font-family: Tahoma, sans-serif;
+    background-color: #f4d0ee;
+    font-size: 200%;
+}
+</style>
+<center>
 <body>
 
-<h1>i love her <3</h1>
+<h1>i love my wife!</h1>
 
 <p id="daysC"></p>
+<p>♥ ♥ ♥</p>
 <p id="percentage"></p>
+<!--<progress id="prog"></progress> -->
 
 <script>
 const date1 = new Date('12/30/2025');
@@ -15,10 +25,12 @@ const diffDaysC = Math.floor(diffTimeC / (1000 * 60 * 60 * 24));
 const remainingDaysC = 975 - diffDaysC;
 const fractionC = Math.round((diffDaysC / 975) * 10000)/100
 console.log(diffDaysC + " days");
-document.getElementById("daysC").innerHTML = "<p>" + diffDaysC + " days so far, " + remainingDaysC + " left!</p>"
+document.getElementById("daysC").innerHTML = diffDaysC + " days so far, <br>" + remainingDaysC + " left!"
 console.log(fractionC + "% there!");
-document.getElementById("percentage").innerHTML = "<p>" + fractionC + "% there!</p>"
+document.getElementById("percentage").innerHTML = fractionC + "%"
+document.getElementById("prog").outerHTML = "<progress value=" + fractionC +" max=100></progress"
 </script>
 
 </body>
+</center>
 </html>
